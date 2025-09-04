@@ -1,0 +1,78 @@
+/* --- Top-level utility registrations (gradient utilities) --- */
+@utility g1 {
+    background: linear-gradient(rgba(196, 203, 245, 0.5), transparent);
+}
+@utility g2 {
+    background: linear-gradient(#3062a3, #19549f);
+}
+@utility g3 {
+    background: linear-gradient(#3c52d9, #0c1838);
+}
+@utility g4 {
+    background: linear-gradient(#253575, #162561);
+}
+@utility g5 {
+    background: linear-gradient(#334679, #162561);
+}
+@utility g6 {
+    background: linear-gradient(#334679, #0c1838);
+}
+@utility g7 {
+    background: linear-gradient(#1b275a, #0e1434);
+}
+@utility g8 {
+    background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+}
+@utility g9 {
+    background: linear-gradient(#080d27, transparent);
+}
+
+/* --- Typography utilities (explicit @utility for component usage) --- */
+@utility h-num {
+    @apply font-inter text-[72px] font-bold leading-[84px];
+}
+@utility h1 {
+    @apply text-[84px] font-black leading-[84px] tracking-[-0.03em];
+}
+@utility h2 {
+    @apply text-[64px] font-black leading-[64px];
+}
+@utility h3 {
+    @apply text-[48px] font-semibold leading-[56px] tracking-[-0.02em];
+}
+@utility h4 {
+    @apply text-[40px] font-semibold leading-[52px];
+}
+@utility h5 {
+    @apply text-[32px] font-semibold leading-[40px];
+}
+@utility h6 {
+    @apply text-[24px] font-medium leading-[36px];
+}
+@utility body-1 {
+    @apply text-[22px] leading-[36px];
+}
+@utility body-2 {
+    @apply text-[18px] font-semibold leading-[32px];
+}
+@utility body-3 {
+    @apply text-[16px] leading-[28px] tracking-[0.02em];
+}
+@utility base {
+    @apply text-[16px] font-medium leading-[24px] tracking-[0.03em];
+}
+@utility base-bold {
+    @apply text-[16px] font-bold leading-[24px];
+}
+@utility base-small {
+    @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+}
+@utility small-1 {
+    @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+}
+@utility small-2 {
+    @apply text-[12px] font-bold leading-[16px] tracking-[0.3em];
+}
+@utility small-compact {
+    @apply text-[12px] font-semibold leading-[18px] tracking-[0.03em];
+}

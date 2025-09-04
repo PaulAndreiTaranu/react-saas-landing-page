@@ -1,0 +1,34 @@
+@layer base {
+    :root {
+        @apply font-sans leading-base font-normal text-text-base bg-bg-base;
+        color-scheme: light dark;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+        @apply bg-s1;
+    }
+
+    body {
+        @apply font-poppins text-[16px] tracking-[-0.03em] text-p5;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    img {
+        @apply block max-w-full;
+    }
+
+    button {
+        @apply bg-none tracking-[-0.03em];
+    }
+
+    input {
+        @apply tracking-[-0.03em];
+    }
+}
