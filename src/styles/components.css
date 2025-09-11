@@ -4,7 +4,7 @@
         @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
     }
     .caption {
-        @apply leading-[--leading-caption] font-[--weight-caption] tracking-[--tracking-caption] mb-5 uppercase text-p3;
+        @apply small-2  mb-5 uppercase text-p3;
     }
     .scroll-hide::-webkit-scrollbar {
         display: none;
@@ -33,7 +33,7 @@
 
     /* Hero */
     .hero-img_res {
-        @apply max-lg:-top-40 max-lg:left-[calc(50%-280px)] max-lg:w-[1160px] max-md:bottom-[-590px] max-md:left-[calc(50%-390px)] max-md:top-auto;
+        @apply max-lg:-top-40 max-lg:left-[calc(50%-280px)] max-lg:w-[1160px] max-md:bottom-[-590px] max-md:left-[calc()] max-md:top-auto;
     }
 
     /* Custom Button */
