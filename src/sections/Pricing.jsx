@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 import { Element } from 'react-scroll'
+import { plans } from '../constants'
 
 const Pricing = () => {
     const [monthly, setMonthly] = useState(false)
@@ -23,10 +24,52 @@ const Pricing = () => {
                             <button
                                 className={clsx('pricing-head_btn', !monthly && 'text-p4')}
                                 onClick={() => setMonthly(false)}>
-                                Annualy
+                                Annual
                             </button>
-                            <div className='g4 rounded-14 before:h-100 pricing-head_btn_before absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden shadow-400 transition-transform duration-500 ' />
+                            <div
+                                className={clsx(
+                                    'g4 rounded-14 before:h-100 pricing-head_btn_before absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden shadow-400 transition-transform duration-500',
+                                    !monthly && 'translate-x-full',
+                                )}
+                            />
                         </div>
+                        <div className='pricing-bg'>
+                            <img
+                                src='/images/bg-outlines.svg'
+                                width={960}
+                                height={380}
+                                alt='outline'
+                                className='relative z-2'
+                            />
+                            <img
+                                src='/images/bg-outlines-fill.png'
+                                width={960}
+                                height={380}
+                                alt='outline'
+                                className='absolute inset-0 opacity-5 mix-blend-soft-light'
+                            />
+                        </div>
+                    </div>
+
+                    {/* Pricing plans */}
+                    <div className='scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6'>
+                        {plans.map((plan, index) => {
+                            return (
+                                <div
+                                    key={plan.id}
+                                    className='pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33% + 2px)]'>
+                                    {index === 1 && (
+                                        <di className='absolute g4 h-330 left-0 right-0 top-0 z-1 roudned-tl-3xl rounded-tr-3xl' />
+                                    )}
+
+                                    <div
+                                        className={clsx(
+                                            'absolute left-0 right-0 z-2 flex items-center justify-center',
+                                            index === 1 ? '-top-6' : '-top-6 xl:-top-11',
+                                        )}></div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </Element>
